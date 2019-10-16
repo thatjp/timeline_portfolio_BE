@@ -44,6 +44,7 @@ router.post('/', (req, res, next) => {
     _id: new mongoose.Types.ObjectId(),
     name: req.body.name,
     description: req.body.description,
+    position: req.body.positionId,
   });
   project
     .save()
