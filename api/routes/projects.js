@@ -5,7 +5,7 @@ const router = express.Router();
 
 const Project = require('../models/project');
 
-router.get('/', (req, res, next) => {
+router.get('/projects', (req, res, next) => {
   Project.find()
     .select('name price _id')
     .exec()
